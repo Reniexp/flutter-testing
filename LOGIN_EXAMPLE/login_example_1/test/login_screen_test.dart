@@ -64,4 +64,23 @@ void main() {
     // Assert
     expect(loginButton, findsOneWidget); 
     });
+
+    testWidgets(
+      "Should show Required Field error message if user email id & password is empty",
+      (WidgetTester tester) async {
+        // Arrange
+        await tester.pumpWidget(const MaterialApp(
+          home: LoginScreen(),
+        ));
+
+        // Act
+        Finder loginButton = find.byType(ElevatedButton);
+        await tester.tap(loginButton);
+        await tester.pumpAndSettle();
+
+        Finder errorTexts = find.text("Require field");
+
+        // Assert
+        expect(errorTexts, findsNWidgets(2));
+    });
 }
