@@ -23,5 +23,25 @@ void main() {
       // Assert
       expect(result, null);
     });
-  
+
+    test('validate for empty password', () {
+      // Arrange & Act
+      var result = Validator.validatePassword('');
+      // Assert
+      expect(result, 'Require field');
+    });
+    
+    test('validate for invalid password', () {
+      // Arrange & Act
+      var result = Validator.validatePassword('pass');
+      // Assert
+      expect(result, 'Please enter atleast 8 charater for password');
+    });
+
+    test('validate for valid password', () {
+      // Arrange & Act
+      var result = Validator.validatePassword('password');
+      // Assert
+      expect(result, null);
+    });
 }
