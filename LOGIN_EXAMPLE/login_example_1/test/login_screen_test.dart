@@ -48,4 +48,20 @@ void main() {
     // Assert
     expect(passwordTextField, findsOneWidget); 
     });
+
+
+    testWidgets("Should have one login button",
+      (WidgetTester tester) async {
+
+    // Arrange
+    await tester.pumpWidget(const MaterialApp(
+      home: LoginScreen(),
+    ));
+  
+    // Act
+    Finder loginButton = find.byType(ElevatedButton); // Poderia ser byKey, mas usamos byType para exemplificar
+
+    // Assert
+    expect(loginButton, findsOneWidget); 
+    });
 }

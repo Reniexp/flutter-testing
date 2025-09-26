@@ -17,20 +17,27 @@ class _LoginScreenState extends State<LoginScreen> {
       appBar: AppBar(
       title: const Text("Login"),
       ),
-      body: Column(
-        children: <Widget>[
-          TextFormField(
-            controller: _emailController,
-            key: const ValueKey("email_id"),
-            decoration: const InputDecoration(hintText: "Enter Email Id"),
-          ),
-          TextFormField(
-            controller: _passwordController,
-            key: const ValueKey("password"),
-            decoration: const InputDecoration(hintText: "Enter Password"),
-            )
-        ]
-      )
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: <Widget>[
+            TextFormField(
+              controller: _emailController,
+              key: const ValueKey("email_id"),
+              decoration: const InputDecoration(hintText: "Enter Email Id"),
+            ),
+            TextFormField(
+              controller: _passwordController,
+              key: const ValueKey("password"),
+              decoration: const InputDecoration(hintText: "Enter Password"),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              ElevatedButton(onPressed: () {}, child: Text("Login"))
+          ],
+        ),
+      ),
     );
   }
 }
