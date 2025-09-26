@@ -23,5 +23,14 @@ void main() {
 
   });
 
+  test('validate for valid email id', () {
+
+      // Arrange & Act
+      var result = Validator.validateEmail('abc@gmail.com');
+
+      // Assert
+      expect(result, null);
+
+    });
   
 }
