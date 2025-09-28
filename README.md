@@ -1,16 +1,23 @@
-# flutter_application_1
+# 📱 Flutter Testing — Unit, Widget & Integration
 
-A new Flutter project.
+Repository for practicing tests while following the course [Flutter Testing: Unit, Widget & Integration Testing](https://www.udemy.com/course/flutter-testing-unit-widget-integration-testing/?couponCode=KEEPLEARNINGBR).
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 📚 Topics
 
-A few resources to get you started if this is your first Flutter project:
+- Unit Testing — business logic and functions  
+- Widget Testing — UI behavior and interactions  
+- Integration Testing — end-to-end scenarios  
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🛠 Tools
+
+Flutter
+
+Dart
+
+flutter_test
+
+integration_test
