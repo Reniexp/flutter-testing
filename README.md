@@ -21,3 +21,5 @@ Dart
 flutter_test
 
 integration_test
+
+[![Udemy Certificate](https://img.shields.io/badge/Udemy-Certificate-brightgreen)](https://www.udemy.com/certificate/UC-16947658-4570-4e78-9997-f3c895f8c8f0/)
