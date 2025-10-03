@@ -19,11 +19,14 @@ void main() {
       Finder userNameTextField = find.byKey(const ValueKey("email_id"));
       Finder passwordTextField = find.byKey(const ValueKey("password"));
       await tester.enterText(userNameTextField, "richa@gmail.com");
+      await tester.pump(const Duration(seconds: 1));
       await tester.enterText(passwordTextField, "password");
+      await tester.pump(const Duration(seconds: 1));
 
       // procurar o botao e clicar
       Finder loginButton = find.byType(ElevatedButton);
       await tester.tap(loginButton);
+      await tester.pump(const Duration(seconds: 1));
       await tester.pumpAndSettle();
 
       Finder welcomeText = find.byType(Text);
