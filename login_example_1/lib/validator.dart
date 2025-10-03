@@ -2,7 +2,7 @@ class Validator {
   static String? validateEmail(String email) {
 
     if (email.isEmpty) {
-      return "Require field";
+      return "Required Field";
     }
 
     String pattern =
@@ -17,7 +17,7 @@ class Validator {
 
   static String? validatePassword(String password) {
     if (password.isEmpty) {
-      return "Require field";
+      return "Required Field";
     }
     if (password.length < 8) {
       return "Please enter atleast 8 charater for password";

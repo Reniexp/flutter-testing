@@ -6,7 +6,7 @@ void main() {
     // Arrange & Act
     var result = Validator.validateEmail('');
     // Assert
-    expect(result, "Require field");
+    expect(result, "Required field");
   });
 
 

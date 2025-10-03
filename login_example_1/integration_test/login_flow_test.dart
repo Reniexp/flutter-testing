@@ -8,6 +8,25 @@ void main() {
     IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
     testWidgets(
+        "Should show Required Fields error message when user taps on login button without entering email id & password",
+        (WidgetTester tester) async {
+      // ARRANGE
+      await tester.pumpWidget(const MaterialApp(
+        home: LoginScreen(),
+      ));
+
+      // ACT
+      Finder loginButton = find.byType(ElevatedButton);
+      await tester.tap(loginButton);
+      await tester.pumpAndSettle(Duration(seconds: 2));
+
+      Finder errorText = find.text("Required Field");
+
+      //ASSERT
+      expect(errorText, findsNWidgets(2));
+    });
+    
+    testWidgets(
       "Should show home screen when user taps on login button after entering valid email id & password", (WidgetTester tester) async {
       // Arrange
       await tester.pumpWidget(const MaterialApp(
